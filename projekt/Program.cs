@@ -20,6 +20,7 @@ namespace projekt
                 Console.WriteLine("3 : Sumuj wydatki ");
                 Console.WriteLine("4:  Przejrzyj opłaty miesieczne ");
                 Console.WriteLine("5:  Dodaj opłaty miesieczne ");
+                Console.WriteLine("6:  Gotowy produkt ");
                 wybor = Console.ReadLine();
                 switch (wybor)
                 {
@@ -37,6 +38,9 @@ namespace projekt
                         break;
                     case "5":
                         listaZakupow.DodajOplaty();
+                        break;
+                    case "6":
+                        listaZakupow.GotowyProdukt();
                         break;
                     case "9":
                         Console.ReadKey();

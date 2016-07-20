@@ -14,33 +14,22 @@ namespace projekt
         public string miesiac { get; set; }
         public string rok { get; set; }
 
-        public string Wypisz()
+        virtual public string Wypisz()
         {
             string x;
             x = "Nazwa: " + this.nazwa + ", koszt: "
                 + this.koszt + ", data: " + this.dzien + "." + this.miesiac + "." + this.rok;
 
             return x;
+
         }
 
-     
+
+
 
 
     }
 
-    public class OplatyMiesieczne : Zakupy
-    {
-        public string Ilepowtorzen;
-
-        public string WypiszOpłaty()
-        {
-            string x;
-            x = "Nazwa: " + this.nazwa + ", koszt: "
-                + this.koszt  + "ile powtorzen:" + this.Ilepowtorzen;
-
-            return x;
-        }
-
-    }
+    
 
 }

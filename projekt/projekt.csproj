@@ -43,6 +43,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="EnumPrzedmioty.cs" />
+    <Compile Include="Interfejs.cs" />
+    <Compile Include="OplatyMiesieczne.cs" />
     <Compile Include="zakupy.cs" />
     <Compile Include="lista.cs" />
     <Compile Include="Program.cs" />

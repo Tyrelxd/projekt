@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace projekt
 {
-    public class ZbiorZakupow
+    public class ZbiorZakupow : IOplaty
     {
         public List<Zakupy> ListaZakupow;
         public List<OplatyMiesieczne> ListaOplat;
@@ -42,7 +42,7 @@ namespace projekt
         {
             foreach (var Oplatymiesieczne in this.ListaOplat)
             {
-                Console.WriteLine(Oplatymiesieczne.WypiszOpłaty());
+                Console.WriteLine(Oplatymiesieczne.Wypisz());
             }
         }
 
@@ -102,5 +102,65 @@ namespace projekt
 
         }
 
+        public void GotowyProdukt()
+        {
+            Zakupy ogolne = new Zakupy();
+            Console.WriteLine("Wpisz numer");
+            Console.WriteLine("2.Mleko");
+            Console.WriteLine("3.Chleb");
+            Console.WriteLine("5.Maslo");
+            Console.WriteLine("6.Banan");
+            Console.WriteLine("7.Czekolada");
+            Console.WriteLine("11.Jajka");
+            string produkt;
+            produkt = Console.ReadLine();
+            ogolne.nazwa = produkt;
+            if (produkt == "Mleko")
+            {
+                int mleko = (int)EnumPrzedmioty.Przedmioty.mleko;
+                ogolne.koszt = Convert.ToString(mleko);
+            }
+            if (produkt == "Chleb")
+            {
+                int chleb = (int)EnumPrzedmioty.Przedmioty.chleb;
+                ogolne.koszt = Convert.ToString(chleb);
+            }
+            if (produkt == "Maslo")
+            {
+                int maslo = (int)EnumPrzedmioty.Przedmioty.maslo;
+                ogolne.koszt = Convert.ToString(maslo);
+            }
+            if (produkt == "Banan")
+            {
+                int banan = (int)EnumPrzedmioty.Przedmioty.banan;
+                ogolne.koszt = Convert.ToString(banan);
+            }
+            if (produkt == "Czekolada")
+            {
+                int czekolada = (int)EnumPrzedmioty.Przedmioty.czekolada;
+                ogolne.koszt = Convert.ToString(czekolada);
+            }
+            if (produkt == "Jajka")
+                 {
+                int jajka = (int)EnumPrzedmioty.Przedmioty.jajka;
+                ogolne.koszt = Convert.ToString(jajka);
+            };
+
+
+            Console.WriteLine("Podaj dzien");
+            ogolne.dzien = Console.ReadLine();
+            Console.WriteLine("Podaj miesiac");
+            ogolne.miesiac = Console.ReadLine();
+            Console.WriteLine("Podaj rok");
+            ogolne.rok = Console.ReadLine();
+            this.ListaZakupow.Add(ogolne);
+        }
+
+
+
+
+
+
+
+        }
     }
-}
